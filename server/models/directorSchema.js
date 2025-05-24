@@ -5,7 +5,7 @@ const directorSchema = new Schema({
   age: Number,
 })
 
-const Director = model("Director", directorSchema);
+const Director = model("Director", directorSchema, "Directors");
 console.log("🧾 Collection name used by Mongoose:", Director.collection.name);
 
-module.exports = model("Director", directorSchema, "Directors");
+module.exports = Director;

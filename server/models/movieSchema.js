@@ -5,7 +5,8 @@ const movieSchema = new Schema({
   genre: String,
   directorId: String,
 })
-const Movie = model("Movie", movieSchema);
+
+const Movie = model("Movie", movieSchema, "Movies");
 console.log("🧾 Collection name used by Mongoose:", Movie.collection.name);
 
-module.exports = model("Movie", movieSchema, "Movies");
+module.exports = Movie;
